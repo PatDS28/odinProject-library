@@ -1,0 +1,47 @@
+div{
+  border: 1px solid black;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Roboto;
+}
+.main-container{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-template-areas: 
+  "introduction-container introduction-container introduction-container"
+  "adding-container books-list-container books-list-container"
+  "adding-container books-list-container books-list-container";
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+}
+/* intro container */
+.introduction-container{
+  grid-area: introduction-container;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.introduction-container img{
+  width: 10rem;
+  height: 10rem;
+  margin-right: 30px;
+}
+.introduction-container h1{
+  font-size: 5rem;
+}
+
+/* adding container */
+
+.adding-container{
+  grid-area: adding-container;
+}
+
+.books-list-container{
+  grid-area: books-list-container;
+}
