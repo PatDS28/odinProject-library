@@ -1,5 +1,5 @@
 div{
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 body{
   margin: 0;
@@ -21,6 +21,7 @@ body{
 }
 /* intro container */
 .introduction-container{
+  background-color: orange;
   grid-area: introduction-container;
   display: flex;
   flex-direction: row;
@@ -39,7 +40,9 @@ body{
 /* adding container */
 
 .adding-container{
+  background-color: #FF8D21;
   grid-area: adding-container;
+  padding: 20px;
 }
 .add-form-container{
   display: flex;
@@ -53,5 +56,21 @@ body{
 
 
 .books-list-container{
+  background-color: #FFB76B;
   grid-area: books-list-container;
+  display:flex;
+  padding:50px;
+  flex-wrap: wrap;
+}
+.card{
+  height:200px;
+  width: 300px;
+  margin: 10px;
+  padding:10px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: #FFCD90;
+}
+.card button{
+  padding: 10px 20px;
 }
