@@ -41,6 +41,16 @@ body{
 .adding-container{
   grid-area: adding-container;
 }
+.add-form-container{
+  display: flex;
+  justify-content: center;
+}
+.add-form-container button{
+  padding: 10px 50px;
+  font-size: 2rem;
+  border-radius: 30px;
+}
+
 
 .books-list-container{
   grid-area: books-list-container;
