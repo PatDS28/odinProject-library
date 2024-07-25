@@ -84,6 +84,9 @@ submitBtn.addEventListener("click", ()=>{
 
     myLibrary.push(book);
 
+    // clear screen
+    document.querySelector('.books-list-container').innerHTML = '';
+    // print library
     printBooks(myLibrary);
   }
   else{
