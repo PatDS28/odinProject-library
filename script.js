@@ -7,10 +7,12 @@ function Book(author, title, pageNumber, haveRead) {
   this.pageNumber = pageNumber;
   this.haveRead = haveRead;
 }
-// book1 = new Book("Robert Greene", "40 Laws of Power", 452, "no")
-// book2 = new Book("Brianna West", "The Mountain is You", 241, "no")
-// myLibrary.push(book1);
-// myLibrary.push(book2);
+book1 = new Book("Robert Greene", "40 Laws of Power", 452, "no")
+book2 = new Book("Brianna West", "The Mountain is You", 241, "no")
+myLibrary.push(book1);
+myLibrary.push(book2);
+
+
 
 function addBookToLibrary(author, title, pageNumber, haveRead) {
   // do stuff here
@@ -39,6 +41,23 @@ function showBooks(author, title, pageNumber, haveRead){
 }
 // showBooks(myLibrary[0].author, myLibrary[0].author, myLibrary[0].author, myLibrary[0].author)
 
+function printBooks (library){
+  count = library.length -1;
+  while (count >=0){
+    // console.log(library[count].author, library[count].author, library[count].author, library[count].author);
+    showBooks(library[count].title, library[count].author, library[count].pageNumber, library[count].haveRead)
+    count--;
+  }
+}
+printBooks(myLibrary);
+
+
+
+
+
+
+
+
 const openModal = document.querySelector(".open-modal");
 const closeModal = document.querySelector(".exit");
 
@@ -52,8 +71,22 @@ closeModal.addEventListener("click", ()=>{
 });
 
 const submitBtn = document.querySelector(".submitForm");
+
 submitBtn.addEventListener("click", ()=>{
-  // console.log("asdmop")
-  const name = document.querySelector("#name");
-  console.log(name.textContent);
+  event.preventDefault();
+  const form = document.getElementById("myForm");
+  if(form.checkValidity()){
+    const name = document.getElementById("name").value;
+    const author = document.getElementById("author").value;
+    const pageNo = document.getElementById("PageNo").value;
+    const haveRed = document.getElementById("haveRed").checked;
+    book = new Book(author, name, pageNo, haveRed)
+
+    myLibrary.push(book);
+
+    printBooks(myLibrary);
+  }
+  else{
+    console.log("not ok")
+  }
 })
