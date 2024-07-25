@@ -40,8 +40,20 @@ function showBooks(author, title, pageNumber, haveRead){
 // showBooks(myLibrary[0].author, myLibrary[0].author, myLibrary[0].author, myLibrary[0].author)
 
 const openModal = document.querySelector(".open-modal");
+const closeModal = document.querySelector(".exit");
+
 const dialog = document.querySelector(".dialog");
 
 openModal.addEventListener("click", ()=>{
   dialog.showModal();
 });
+closeModal.addEventListener("click", ()=>{
+  dialog.close();
+});
+
+const submitBtn = document.querySelector(".submitForm");
+submitBtn.addEventListener("click", ()=>{
+  // console.log("asdmop")
+  const name = document.querySelector("#name");
+  console.log(name.textContent);
+})
