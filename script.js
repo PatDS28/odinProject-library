@@ -7,11 +7,10 @@ function Book(author, title, pageNumber, haveRead) {
   this.pageNumber = pageNumber;
   this.haveRead = haveRead;
 }
-book1 = new Book("Robert Greene", "40 Laws of Power", 452, "no")
-book2 = new Book("Brianna West", "The Mountain is You", 241, "no")
-
-myLibrary.push(book1);
-myLibrary.push(book2);
+// book1 = new Book("Robert Greene", "40 Laws of Power", 452, "no")
+// book2 = new Book("Brianna West", "The Mountain is You", 241, "no")
+// myLibrary.push(book1);
+// myLibrary.push(book2);
 
 function addBookToLibrary(author, title, pageNumber, haveRead) {
   // do stuff here
@@ -38,10 +37,11 @@ function showBooks(author, title, pageNumber, haveRead){
 
   container.appendChild(newDiv);
 }
-showBooks(myLibrary[0].author, myLibrary[0].author, myLibrary[0].author, myLibrary[0].author)
+// showBooks(myLibrary[0].author, myLibrary[0].author, myLibrary[0].author, myLibrary[0].author)
 
-// const container = document.querySelector(".books-list-container");
-// const ex = "ioqnodfipasnmopda"
-// container.innerHTML = myLibrary
-console.log(myLibrary)
-console.log(myLibrary[0].author)
+const openModal = document.querySelector(".open-modal");
+const dialog = document.querySelector(".dialog");
+
+openModal.addEventListener("click", ()=>{
+  dialog.showModal();
+});
